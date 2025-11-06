@@ -16,7 +16,7 @@ if TYPE_CHECKING:
 load_dotenv(".env", verbose=True)
 
 KNOWLEDGE_BASE_ID = os.environ.get("KNOWLEDGE_BASE_ID")
-MODEL_ID = "anthropic.claude-3-haiku-20240307-v1:0"
+MODEL_ID = os.environ.get("MODEL_ID")
 REGION = "ap-northeast-1"
 
 agents_for_bedrock_runtime: "AgentsforBedrockRuntimeClient" = boto3.client(
